@@ -1,6 +1,0 @@
-@Core_BaseTemplate_HostAddress = http://localhost:5149
-
-GET {{Core_BaseTemplate_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

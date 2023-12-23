@@ -1,5 +1,6 @@
 using Core_BaseTemplate.Data;
 using Core_BaseTemplate.Models;
+using Core_BaseTemplate.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.FeatureManagement;
 
@@ -26,10 +27,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Repositories
-builder.Services.AddScoped<SampleClass>();
+builder.Services.AddScoped<UserRepository>();
 
 // Database
-builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings:DATABASE")));
+builder.Services.AddDbContext<DataContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DB_KEVINS")));
 
 // Bind configuration AppSettings section to the Settings object
 builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection("ApplicationSettings"));

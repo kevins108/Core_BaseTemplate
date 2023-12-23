@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Core_BaseTemplate.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core_BaseTemplate.Data
 {
-	public class DataContext : DbContext
+	public partial class DataContext : DbContext
 	{
 		public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-		// Add DbSets
-
+		public virtual DbSet<UserProfile> UserProfile { get; set; }
 	}
 }
