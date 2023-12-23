@@ -1,4 +1,3 @@
 # .NET8 Base API Template
-This base template is setup to use Azure App Configurations and Feature Management(Flags).
+This is a base .NET 8 API template, setup with Azure App Configurations and Feature Management Flags and a basic DbContext for a SQL database.
 
-The Weather Controller is setup to retreive values from Azure.
